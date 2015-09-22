@@ -5,8 +5,8 @@ import java.io.*;
 public class PalindromeString
 {
 
-    static String inputString;
-    static String reversedString;
+    private static String inputString;
+    private static String reversedString;
 
     public static String reverseString(String input) {
         input = removeSymbols(input);
