@@ -5,7 +5,6 @@ import java.io.*;
 public class PalindromeString
 {
 
-    private static String inputString;
     private static String reversedString;
 
     public static String reverseString(String input) {
@@ -26,7 +25,7 @@ public class PalindromeString
     {
         System.out.println("Enter the string:");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        inputString = br.readLine();
+        String inputString = br.readLine();
         System.out.println("Result string is:");
         reversedString = reverseString(inputString);
         System.out.println(reversedString);
