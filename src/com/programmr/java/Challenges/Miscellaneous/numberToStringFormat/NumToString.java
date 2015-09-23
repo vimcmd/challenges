@@ -48,6 +48,7 @@ public class NumToString
     public static String numToString(int num) {
         // TODO add whitespaces
         //return String.join(" ", numHundredsToString(num), numOtherTensToString(num), numTensToString(num));
+        // add whitespace to end ow the whord, and return String.trim(str)
         List<String> list = new LinkedList<>();
 
         if (!numHundredsToString(num).isEmpty()){
