@@ -1,38 +1,29 @@
 package com.programmr.java.Challenges.Miscellaneous.numberToStringFormat;
 
-
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Scanner;
 
-public class NumToString
-{
+public class NumToString {
 
     public static final String TENS[] = {"one","two","three","four","five","six"," seven", "eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"};
     public static final String SECOND_TENS[] = {"twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"};
     public static final String HUNDRED = "hundred";
 
-    public static String numHundredsToString(final int num) {
-        String tmp = "";
+    public static String numToString(int num) {
+        StringBuilder str = new StringBuilder(" ");
+        // Hundreds
         int n = num / 100;
         if (n > 0) {
-            tmp += TENS[n-1] + " " + HUNDRED;
+            str.append(TENS[n-1]).append(" ").append(HUNDRED).append(" ");
         }
-        return tmp;
-    }
 
-    public static String numOtherTensToString(final int num) {
-        String tmp = "";
-        int n = (num / 10) % 10;
+        // Tens
+        n = (num / 10) % 10;
         if (n > 1) {
-            tmp += SECOND_TENS[n-2];
+            str.append(SECOND_TENS[n-2]).append(" ");
         }
-        return tmp;
-    }
 
-    public static String numTensToString(final int num) {
-        String tmp = "";
-        int n = (num / 10) % 10;
+        // Under tens
+        n = (num / 10) % 10;
         if (n > 1) {
             n = num % 10;
         } else {
@@ -40,29 +31,10 @@ public class NumToString
         }
 
         if (n > 0) {
-            tmp += TENS[n-1];
-        }
-        return tmp;
-    }
-
-    public static String numToString(int num) {
-        // TODO add whitespaces
-        //return String.join(" ", numHundredsToString(num), numOtherTensToString(num), numTensToString(num));
-        // add whitespace to end ow the whord, and return String.trim(str)
-        List<String> list = new LinkedList<>();
-
-        if (!numHundredsToString(num).isEmpty()){
-           list.add(numHundredsToString(num));
-        }
-        if (!numOtherTensToString(num).isEmpty()){
-            list.add(numOtherTensToString(num));
-        }
-        if (!numTensToString(num).isEmpty()){
-            list.add(numTensToString(num));
+            str.append(TENS[n-1]).append(" ");
         }
 
-        // TODO fix for below Java 8 (ternary operator?)
-        return String.join(" ", list);
+        return str.toString().trim();
 
     }
 
@@ -78,7 +50,5 @@ public class NumToString
         System.out.println(t);
 
     }
-
-
 
 }
