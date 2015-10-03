@@ -1,4 +1,4 @@
-package com.programmr.java.Challenges.Miscellaneous.PalindromeString;
+package com.programmr.java.Challenges.Miscellaneous.palindromeString;
 
 import java.io.*;
 
