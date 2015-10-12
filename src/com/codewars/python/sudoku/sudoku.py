@@ -20,7 +20,7 @@ bad_list = [[1, 3, 2, 5, 7, 9, 4, 6, 8]
            ,[3, 6, 5, 8, 1, 7, 9, 2, 4]
            ,[8, 7, 9, 6, 4, 2, 1, 3, 5]]
 
-# task not finished! add check for 3x3 blocks
+# TODO: task not finished! add check for 3x3 blocks
 def done_or_not(board): #board[i][j]
     # map(list, zip(*board)) equal to transposed matrix
     if [sum(row) for row in board] != [45]*9 or [sum(col) for col in map(list, zip(*board))] != [45]*9:
