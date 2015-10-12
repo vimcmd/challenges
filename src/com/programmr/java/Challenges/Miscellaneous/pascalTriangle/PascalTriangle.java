@@ -68,7 +68,7 @@ public class PascalTriangle
             for (int i = fullLength - row.size(); i > 0; i--) {
                 rowString.insert(0, "_");
             }
-
+            // add after-underscores
             for (Object elem : row) {
                 rowString.append(elem).append("_");
             }
