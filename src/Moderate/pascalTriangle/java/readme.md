@@ -1,7 +1,5 @@
 # Pascal Triangle
 
-> Level: Moderate
->
 > Source: [Programmr](http://programmr.com/)
 
 ##### Description:

@@ -1,4 +1,4 @@
-package com.programmr.java.Challenges.Miscellaneous.pascalTriangle;
+package Moderate.pascalTriangle.java;
 
 
 import java.util.*;
