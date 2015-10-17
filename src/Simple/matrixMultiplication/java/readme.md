@@ -1,9 +1,12 @@
 # Matrix multiplication
 
-Write a program to takes two matrix(3*3) array as inputs and calculate the multiplication of both matrix.
-Use given logic for input/output.
+> Source: [Programmr](http://programmr.com/)
 
-### Example :
+##### Description:
+Write a program to takes two matrix(3*3) array as inputs and calculate the multiplication of both matrix.
+Use given logic in main method for input/output.
+
+##### Example :
 1. If two matrix are :
 
 Matrix 1st :

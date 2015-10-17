@@ -1,4 +1,4 @@
-package com.programmr.java.Challenges.Miscellaneous.matrixMultiplication;
+package Simple.matrixMultiplication.java;
 
 
 import java.util.*;
