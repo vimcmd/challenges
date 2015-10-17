@@ -1,6 +1,5 @@
-package com.programmr.java.Challenges.Miscellaneous.isBinaryOrNot;
+package Elementary.isBinaryOrNot.java;
 
-import java.io.*;
 import java.util.Scanner;
 
 public class CheckBinary {

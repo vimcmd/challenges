@@ -1,7 +1,5 @@
 # Check binary
 
-> Level: Elementary
->
 > Source: [Programmr](http://programmr.com/)
 
 ##### Description:
