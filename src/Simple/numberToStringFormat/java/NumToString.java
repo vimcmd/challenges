@@ -1,4 +1,4 @@
-package com.programmr.java.Challenges.Miscellaneous.numberToStringFormat;
+package Simple.numberToStringFormat.java;
 
 import java.util.Scanner;
 

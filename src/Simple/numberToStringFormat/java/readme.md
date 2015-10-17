@@ -1,7 +1,5 @@
 # Number to string format
 
-> Level: Simple
->
 > Source: [Programmr](http://programmr.com/)
 
 ##### Description:
