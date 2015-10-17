@@ -1,7 +1,13 @@
 # Pascal Triangle
+
+> Level: Moderate
+>
+> Source: [Programmr](http://programmr.com/)
+
+##### Description:
 Write a program to take integer value as input and print Pascal Triangle till input value.
 
-**Example :**
+##### Example:
 
 1.If user gives 4 as input integer value then the pascal triangle should be :
 ```
