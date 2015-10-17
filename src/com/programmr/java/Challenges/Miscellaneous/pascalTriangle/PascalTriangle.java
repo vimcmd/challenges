@@ -32,29 +32,29 @@ public class PascalTriangle
         // initialize first line
         if (totalTriangleLines > 0) {
             triangle.add(Collections.singletonList(1));
-        }
 
-        // add lines till totalTriangleLines
-        for (int i = 1; i < totalTriangleLines; i++) {
-            List<Integer> prevLine = triangle.get(i - 1);
-            List<Integer> currLine = new ArrayList<>();
+            // add lines till totalTriangleLines
+            for (int i = 1; i < totalTriangleLines; i++) {
+                List<Integer> prevLine = triangle.get(i - 1);
+                List<Integer> currLine = new ArrayList<>();
 
-            for (int j = 0; j < prevLine.size() + 1; j++) {
-                Integer sum;
+                for (int j = 0; j < prevLine.size() + 1; j++) {
+                    Integer sum;
 
-                // if previous/next element in previous row not exists (equals to 0),
-                // set current element to 1
-                try {
-                    sum = prevLine.get(j - 1) + prevLine.get(j);
-                } catch (IndexOutOfBoundsException e) {
-                    sum = 1;
+                    // if previous/next element in previous row not exists (equals to 0),
+                    // set current element to 1
+                    try {
+                        sum = prevLine.get(j - 1) + prevLine.get(j);
+                    } catch (IndexOutOfBoundsException e) {
+                        sum = 1;
+                    }
+                    currLine.add(sum);
                 }
-                currLine.add(sum);
+
+                triangle.add(i, currLine);
             }
 
-            triangle.add(i, currLine);
         }
-
         return triangle;
     }
 
