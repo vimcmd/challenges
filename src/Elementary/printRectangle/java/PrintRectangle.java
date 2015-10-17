@@ -1,4 +1,4 @@
-package Elementary.printRectangle;
+package Elementary.printRectangle.java;
 
 
 import java.util.*;
