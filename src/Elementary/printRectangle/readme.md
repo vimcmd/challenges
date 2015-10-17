@@ -1,7 +1,5 @@
 # Print rectangle
 
-> Level: Simple
->
 > Source: [Programmr](http://programmr.com/)
 
 ##### Description:

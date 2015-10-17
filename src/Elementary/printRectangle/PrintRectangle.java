@@ -1,7 +1,6 @@
-package com.programmr.java.Challenges.Miscellaneous.printRectangle;
+package Elementary.printRectangle;
 
 
-import java.io.*;
 import java.util.*;
 
 public class PrintRectangle {
