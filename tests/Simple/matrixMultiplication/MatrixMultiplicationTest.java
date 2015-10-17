@@ -1,5 +1,6 @@
-package com.programmr.java.Challenges.Miscellaneous.matrixMultiplication;
+package Simple.matrixMultiplication;
 
+import Simple.matrixMultiplication.java.MatrixMultiplication;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

@@ -1,8 +1,6 @@
-package com.programmr.java.Challenges.Miscellaneous.isBinaryOrNot;
+package Elementary.isBinaryOrNot;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 
 public class CheckBinaryTest {

@@ -1,5 +1,6 @@
-package com.programmr.java.Challenges.Miscellaneous.palindromeString;
+package Simple.palindromeString;
 
+import Simple.palindromeString.java.PalindromeString;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
