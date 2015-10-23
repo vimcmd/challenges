@@ -1,4 +1,5 @@
 # Restricted Sum
+> Source: [CheckIO](http://www.checkio.org)
 
 Our new calculator is censored and as such it does not accept certain words. You should try to trick by writing a program
 to calculate the sum of numbers.
