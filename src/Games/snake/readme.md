@@ -3,4 +3,4 @@
 
 
 ##### Notes
-- Lanterna lib used in case of nice terminal improvements (like move cursor position, etc.)
+- [Lanterna](https://github.com/mabe02/lanterna) lib used
