@@ -15,8 +15,10 @@ public class Point {
     }
 
     public Point(int x, int y) {
-        this(x, y, '*');
+        this(x, y, '#');
     }
+
+    // TODO add checkIntersection method,
 
     public void Draw(Terminal terminal) {
         terminal.moveCursor(this.x, this.y);
