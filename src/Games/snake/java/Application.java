@@ -16,10 +16,11 @@ public class Application {
         // TerminalSize screenSize = terminal.getTerminalSize();
         Screen screen = TerminalFacade.createScreen(terminal);
         screen.startScreen();
-        screen.putString(0, 0, "Press Esc to exit", Terminal.Color.WHITE, Terminal.Color.BLACK);
-        screen.refresh();
 
         initBorders(terminal);
+
+        screen.putString(1, 0, " Press Esc to exit ", Terminal.Color.WHITE, Terminal.Color.BLACK);
+        screen.refresh();
 
 //         exit terminal on press Esc key
 //         TODO add window.close listener
@@ -36,7 +37,7 @@ public class Application {
     }
 
     public static void initBorders(Terminal terminal) {
-        Obstacle borderTop = new Obstacle( 0, 1, '%', true, terminal.getTerminalSize().getColumns() - 1 );
+        Obstacle borderTop = new Obstacle( 0, 0, '%', true, terminal.getTerminalSize().getColumns() - 1 );
         borderTop.Draw(terminal);
 
         Obstacle borderBottom = new Obstacle( 0, terminal.getTerminalSize().getRows() - 1, '%', true, terminal.getTerminalSize().getColumns() - 1 );
@@ -45,7 +46,7 @@ public class Application {
         Obstacle borderLeft = new Obstacle(0, 1, '%', false, terminal.getTerminalSize().getRows() - 1);
         borderLeft.Draw(terminal);
 
-        Obstacle borderRight = new Obstacle(terminal.getTerminalSize().getColumns() - 1, 1, '%', false, terminal.getTerminalSize().getRows() - 1 );
+        Obstacle borderRight = new Obstacle(terminal.getTerminalSize().getColumns() - 1, 0, '%', false, terminal.getTerminalSize().getRows() );
         borderRight.Draw(terminal);
 
     }
