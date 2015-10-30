@@ -1,5 +1,6 @@
 package Games.snake.java;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Obstacle extends Figure {
