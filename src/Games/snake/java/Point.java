@@ -18,12 +18,38 @@ public class Point {
         this(x, y, '#');
     }
 
-    // TODO add checkIntersection method,
+    public Point(Point p) {
+        this(p.x, p.y, p.ch);
+    }
 
+    // TODO add checkIntersection method,
     public void Draw(Terminal terminal) {
         terminal.moveCursor(this.x, this.y);
         terminal.putCharacter(this.ch);
         terminal.moveCursor(0, 0);
+    }
+
+    public void clear() {
+        this.ch = ' ';
+        this.Draw(Application.terminal);
+    }
+
+    public void Move(int offset, Direction direction) {
+        switch (direction) {
+            case LEFT: this.x -= offset;
+                break;
+            case RIGHT: this.x += offset;
+                break;
+            case UP: this.y -= offset;
+                break;
+            case DOWN: this.y += offset;
+                break;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return this.x + ", " + y + ", " + ch;
     }
 
 }
