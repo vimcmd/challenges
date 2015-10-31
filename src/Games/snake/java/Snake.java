@@ -37,7 +37,7 @@ public class Snake extends Figure {
 
     /**
      * changes snake movement direction, based on pressed arrow key, restricts opposite direction
-     * @param key - lanterna lib terminal.readInput()
+     * @param key Key terminal.readInput() [lanterna lib]
      */
     public void handleControl(Key key) {
         if (key != null) {
