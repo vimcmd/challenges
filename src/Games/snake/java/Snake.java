@@ -14,7 +14,7 @@ public class Snake extends Figure {
         for (int i = 0; i < length; i++) {
             Point p = new Point( tail );
             pointList.add(p);
-            p.Move(i, direction);
+            p.move(i, direction);
         }
     }
 
@@ -24,13 +24,13 @@ public class Snake extends Figure {
         Point head = getNextPoint();
         pointList.add(head);
         tail.clear();
-        // this.Draw(Application.terminal);
+        // this.draw(Application.terminal);
     }
 
     public Point getNextPoint() {
         Point head = pointList.getLast();
         Point nextPoint = new Point(head);
-        nextPoint.Move(1, direction);
+        nextPoint.move(1, direction);
 
         return nextPoint;
     }

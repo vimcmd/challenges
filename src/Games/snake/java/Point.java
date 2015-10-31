@@ -23,7 +23,7 @@ public class Point {
     }
 
     // TODO add checkIntersection method,
-    public void Draw(Terminal terminal) {
+    public void draw(Terminal terminal) {
         terminal.moveCursor(this.x, this.y);
         terminal.putCharacter(this.ch);
         terminal.moveCursor(0, 0);
@@ -31,10 +31,10 @@ public class Point {
 
     public void clear() {
         this.ch = ' ';
-        this.Draw(Application.terminal);
+        this.draw(Application.terminal);
     }
 
-    public void Move(int offset, Direction direction) {
+    public void move(int offset, Direction direction) {
         switch (direction) {
             case LEFT: this.x -= offset;
                 break;

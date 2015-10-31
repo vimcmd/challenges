@@ -29,8 +29,8 @@ public class Application {
         while (true){
             Key key = terminal.readInput();
             snake.handleControl(key);
-            snake.Move();
-            snake.Draw(terminal);
+            snake.move();
+            snake.draw(terminal);
             screen.refresh();
 
             Thread.sleep(100);
@@ -39,16 +39,16 @@ public class Application {
 
     public static void initBorders(Terminal terminal) {
         Obstacle borderTop = new Obstacle( 0, 0, '%', true, terminal.getTerminalSize().getColumns() - 1 );
-        borderTop.Draw(terminal);
+        borderTop.draw(terminal);
 
         Obstacle borderBottom = new Obstacle( 0, terminal.getTerminalSize().getRows() - 1, '%', true, terminal.getTerminalSize().getColumns() - 1 );
-        borderBottom.Draw(terminal);
+        borderBottom.draw(terminal);
 
         Obstacle borderLeft = new Obstacle(0, 1, '%', false, terminal.getTerminalSize().getRows() - 1);
-        borderLeft.Draw(terminal);
+        borderLeft.draw(terminal);
 
         Obstacle borderRight = new Obstacle(terminal.getTerminalSize().getColumns() - 1, 0, '%', false, terminal.getTerminalSize().getRows() );
-        borderRight.Draw(terminal);
+        borderRight.draw(terminal);
 
     }
 
