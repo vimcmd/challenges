@@ -18,7 +18,7 @@ public class Snake extends Figure {
         }
     }
 
-    protected void Move() {
+    protected void move() {
         Point tail = pointList.getFirst();
         pointList.remove(tail);
         Point head = getNextPoint();
@@ -35,15 +35,19 @@ public class Snake extends Figure {
         return nextPoint;
     }
 
+    /**
+     * changes snake movement direction, based on pressed arrow key, restricts opposite direction
+     * @param key - lanterna lib terminal.readInput()
+     */
     public void handleControl(Key key) {
         if (key != null) {
-            if (key.getKind() == Key.Kind.ArrowUp ) {
+            if ( (key.getKind() == Key.Kind.ArrowUp) && (this.direction != Direction.DOWN) ) {
                 this.direction = Direction.UP;
-            } else if (key.getKind() == Key.Kind.ArrowDown ) {
+            } else if ( (key.getKind() == Key.Kind.ArrowDown) && (this.direction != Direction.UP)  ) {
                 this.direction = Direction.DOWN;
-            } else if (key.getKind() == Key.Kind.ArrowLeft ) {
+            } else if ( (key.getKind() == Key.Kind.ArrowLeft) && (this.direction != Direction.RIGHT)  ) {
                 this.direction = Direction.LEFT;
-            } else if (key.getKind() == Key.Kind.ArrowRight ) {
+            } else if ( (key.getKind() == Key.Kind.ArrowRight) && (this.direction != Direction.LEFT)  ) {
                 this.direction = Direction.RIGHT;
             }
         }
