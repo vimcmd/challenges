@@ -22,7 +22,7 @@ public class Application {
                                                }
         );
 
-        initBorders(terminal);
+        Obstacle.initBorders(terminal);
 
         Snake snake = new Snake(new Point(1,1), 4);
 
@@ -35,21 +35,6 @@ public class Application {
 
             Thread.sleep(100);
         }
-    }
-
-    public static void initBorders(Terminal terminal) {
-        Obstacle borderTop = new Obstacle( 0, 0, '%', true, terminal.getTerminalSize().getColumns() - 1 );
-        borderTop.draw(terminal);
-
-        Obstacle borderBottom = new Obstacle( 0, terminal.getTerminalSize().getRows() - 1, '%', true, terminal.getTerminalSize().getColumns() - 1 );
-        borderBottom.draw(terminal);
-
-        Obstacle borderLeft = new Obstacle(0, 1, '%', false, terminal.getTerminalSize().getRows() - 1);
-        borderLeft.draw(terminal);
-
-        Obstacle borderRight = new Obstacle(terminal.getTerminalSize().getColumns() - 1, 0, '%', false, terminal.getTerminalSize().getRows() );
-        borderRight.draw(terminal);
-
     }
 
 }
