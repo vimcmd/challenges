@@ -6,6 +6,7 @@ import java.util.LinkedList;
 public class Snake extends Figure {
 
     private Direction direction = Direction.RIGHT;
+    private static final int DEFAULT_SNAKE_SIZE = 3;
 
     public Snake(Point tail, int length) {
         pointList = new LinkedList<>();
@@ -14,6 +15,10 @@ public class Snake extends Figure {
             pointList.add(p);
             p.move(i, direction);
         }
+    }
+
+    public Snake(Point tail) {
+        this(tail, DEFAULT_SNAKE_SIZE);
     }
 
     protected void move() {
