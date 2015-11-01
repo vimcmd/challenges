@@ -1,12 +1,11 @@
 package Games.snake.java;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 public class Obstacle extends Figure {
 
     public Obstacle(int x, int y, char ch, boolean horizontal, int length) {
-        pointList = new LinkedList<>();
+        pointList = new ArrayList<>();
 
         for (int i = 0; i < length; i++) {
             pointList.add(new Point(x, y, ch));
