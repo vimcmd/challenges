@@ -8,9 +8,7 @@ public class Snake extends Figure {
     private Direction direction = Direction.RIGHT;
 
     public Snake(Point tail, int length) {
-
         pointList = new LinkedList<>();
-
         for (int i = 0; i < length; i++) {
             Point p = new Point( tail );
             pointList.add(p);
@@ -19,16 +17,15 @@ public class Snake extends Figure {
     }
 
     protected void move() {
-        Point tail = pointList.getFirst();
+        Point tail = ((LinkedList<Point>)pointList).getFirst();
         pointList.remove(tail);
         Point head = getNextPoint();
         pointList.add(head);
         tail.clear();
-        // this.draw(Application.terminal);
     }
 
     public Point getNextPoint() {
-        Point head = pointList.getLast();
+        Point head = ((LinkedList<Point>)pointList).getLast();
         Point nextPoint = new Point(head);
         nextPoint.move(1, direction);
 
