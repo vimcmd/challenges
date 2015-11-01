@@ -1,14 +1,13 @@
 package Games.snake.java;
 
 import com.googlecode.lanterna.screen.Screen;
-import com.googlecode.lanterna.terminal.Terminal;
 import com.googlecode.lanterna.terminal.swing.SwingTerminal;
 import com.googlecode.lanterna.input.Key;
 
 public class Application {
 
     // Create terminal window with listener to close (X) button
-    final static SwingTerminal terminal = new SwingTerminal();;
+    final static SwingTerminal terminal = new SwingTerminal();
     final static Screen screen = new Screen(terminal);
 
     public static void main(String[] args) throws InterruptedException {
