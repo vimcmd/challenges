@@ -1,24 +1,28 @@
 package Simple.palindromeString.java;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class PalindromeString
 {
 
     private static String reversedString;
 
-    public static String reverseString(String input) {
+    public static String reverseString(String input)
+    {
         input = removeSymbols(input);
         return new StringBuilder(input).reverse().toString().toLowerCase();
     }
 
-    public static boolean isPalindrome(String input) {
+    public static boolean isPalindrome(String input)
+    {
         input = removeSymbols(input);
         return (input.toLowerCase().equals(reversedString));
     }
 
-    public static String removeSymbols(String str) {
-        return str.replaceAll("[.><,:;!/@#$%^&*()-=_+']","");
+    public static String removeSymbols(String str)
+    {
+        return str.replaceAll("[.><,:;!/@#$%^&*()-=_+']", "");
     }
 
     public static void main(String a[]) throws Exception
@@ -30,10 +34,11 @@ public class PalindromeString
         reversedString = reverseString(inputString);
         System.out.println(reversedString);
 
-        if(isPalindrome(inputString)) {
+        if (isPalindrome(inputString))
+        {
             System.out.print("palindrome");
-        }
-        else {
+        } else
+        {
             System.out.print("not a palindrome");
         }
     }

@@ -22,4 +22,3 @@ class Building:
 
     def __repr__(self):
         return str("Building(%s, %s, %s, %s, %s)") % (self.south, self.west, self.width_WE, self.width_NS, self.height)
-

@@ -1,7 +1,7 @@
 function Rabbit(adjective) {
     Rabbit.count++;
     this.adjective = adjective;
-    this.describeMyself = function() {
+    this.describeMyself = function () {
         return console.log("I am a " + this.adjective + " rabbit");
     };
 }
@@ -17,4 +17,5 @@ var rabbit4 = new Rabbit("high");
 for (i = 1; i <= Rabbit.count; i++) {
     rabbitN = "rabbit" + i;
     console.log(this[rabbitN].describeMyself());
-};
+}
+;

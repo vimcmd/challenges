@@ -1,19 +1,20 @@
 package Elementary.printRectangle.java;
 
 
-import java.util.*;
+import java.util.Scanner;
 
-public class PrintRectangle {
+public class PrintRectangle
+{
 
     public static void main(String a[]) throws Exception
     {
-        int l,w;
+        int l, w;
 
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter the length:");
-        l=scan.nextInt();
+        l = scan.nextInt();
         System.out.println("Enter the width:");
-        w=scan.nextInt();
+        w = scan.nextInt();
 
         //Write your logic here
 
@@ -23,17 +24,20 @@ public class PrintRectangle {
         StringBuilder outLine = new StringBuilder();
         StringBuilder innerLine = new StringBuilder().append(SYMBOL).append(SYMBOL);
 
-        for (int i = 0; i < l; i++) {
+        for (int i = 0; i < l; i++)
+        {
             outLine.append(SYMBOL);
         }
 
-        for (int i = 0; i < l - 2; i++) {
+        for (int i = 0; i < l - 2; i++)
+        {
             innerLine.insert(1, WHITESPACE);
         }
 
         // print result
         System.out.println(outLine);
-        for (int i = 0; i < w - 2; i++) {
+        for (int i = 0; i < w - 2; i++)
+        {
             System.out.println(innerLine);
         }
         System.out.println(outLine);

@@ -65,7 +65,8 @@ function PointCollection() {
         }
     };
 
-    this.reset = function (bubbleShape) {};
+    this.reset = function (bubbleShape) {
+    };
 }
 
 function Point(x, y, z, size, color) {
@@ -127,9 +128,9 @@ function Point(x, y, z, size, color) {
 }
 
 function makeColor(hslList, fade) {
-    var hue = hslList[0] /*- 17.0 * fade / 1000.0*/ ;
-    var sat = hslList[1] /*+ 81.0 * fade / 1000.0*/ ;
-    var lgt = hslList[2] /*+ 58.0 * fade / 1000.0*/ ;
+    var hue = hslList[0] /*- 17.0 * fade / 1000.0*/;
+    var sat = hslList[1] /*+ 81.0 * fade / 1000.0*/;
+    var lgt = hslList[2] /*+ 58.0 * fade / 1000.0*/;
     return "hsl(" + hue + "," + sat + "%," + lgt + "%)";
 }
 

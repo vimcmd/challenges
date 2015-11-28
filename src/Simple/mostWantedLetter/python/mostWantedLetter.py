@@ -5,6 +5,7 @@ def checkio(text):
             new_text += c
     return max(sorted(set(new_text)), key=new_text.count)
 
+
 if __name__ == '__main__':
     # These "asserts" using only for self-checking and not necessary for auto-testing
     assert checkio("Hello World!") == "l", "Hello test"

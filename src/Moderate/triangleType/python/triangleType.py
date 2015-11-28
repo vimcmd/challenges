@@ -6,18 +6,19 @@
 #  2 : right triangle
 #  3 : obtuse triangle
 
-from math import cos
 
 def check_angle(a, b, c):
-    return pow(a, 2)+pow(b, 2)-pow(c, 2)
+    return pow(a, 2) + pow(b, 2) - pow(c, 2)
+
 
 def triangle_type(a, b, c):
-    if a+b > c and a+c > b and c+b > a:
+    if a + b > c and a + c > b and c + b > a:
         if check_angle(a, b, c) > 0 and check_angle(c, a, b) > 0 and check_angle(b, c, a) > 0:
             return 1
         elif check_angle(a, b, c) == 0 or check_angle(c, a, b) == 0 or check_angle(b, c, a) == 0:
             return 2
-        else: return 3
+        else:
+            return 3
     else:
         return 0
 

@@ -3,12 +3,14 @@ package Simple.numberToStringFormat;
 import Simple.numberToStringFormat.java.NumToString;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-public class NumToStringTest {
+public class NumToStringTest
+{
 
     @Test
-    public void testNumToStringOne() throws Exception {
+    public void testNumToStringOne() throws Exception
+    {
         final String caseString = "one";
         final int caseNum = 1;
 
@@ -17,7 +19,8 @@ public class NumToStringTest {
     }
 
     @Test
-    public void testNumToStringTwenty() throws Exception {
+    public void testNumToStringTwenty() throws Exception
+    {
         final String caseString = "twenty";
         final int caseNum = 20;
 
@@ -25,7 +28,8 @@ public class NumToStringTest {
     }
 
     @Test
-    public void testNumToStringTwentyTwo() throws Exception {
+    public void testNumToStringTwentyTwo() throws Exception
+    {
         final String caseString = "twenty two";
         final int caseNum = 22;
 
@@ -33,7 +37,8 @@ public class NumToStringTest {
     }
 
     @Test
-    public void testNumToStringThirty() throws Exception {
+    public void testNumToStringThirty() throws Exception
+    {
         final String caseString = "thirty";
         final int caseNum = 30;
 
@@ -41,7 +46,8 @@ public class NumToStringTest {
     }
 
     @Test
-    public void testNumToStringThirtyNine() throws Exception {
+    public void testNumToStringThirtyNine() throws Exception
+    {
         final String caseString = "thirty nine";
         final int caseNum = 39;
 
@@ -49,7 +55,8 @@ public class NumToStringTest {
     }
 
     @Test
-    public void testNumToStringTwoHundred() throws Exception {
+    public void testNumToStringTwoHundred() throws Exception
+    {
         final String caseString = "two hundred";
         final int caseNum = 200;
 
@@ -57,7 +64,8 @@ public class NumToStringTest {
     }
 
     @Test
-    public void testNumToStringTwoHundredNineteen() throws Exception {
+    public void testNumToStringTwoHundredNineteen() throws Exception
+    {
         final String caseString = "two hundred nineteen";
         final int caseNum = 219;
 
@@ -65,7 +73,8 @@ public class NumToStringTest {
     }
 
     @Test
-    public void testNumToStringTwoHundredFifty() throws Exception {
+    public void testNumToStringTwoHundredFifty() throws Exception
+    {
         final String caseString = "two hundred fifty";
         final int caseNum = 250;
 
@@ -73,7 +82,8 @@ public class NumToStringTest {
     }
 
     @Test
-    public void testNumToStringTwoHundredFiftyEight() throws Exception {
+    public void testNumToStringTwoHundredFiftyEight() throws Exception
+    {
         final String caseString = "two hundred fifty eight";
         final int caseNum = 258;
 
@@ -81,7 +91,8 @@ public class NumToStringTest {
     }
 
     @Test
-    public void testMain() throws Exception {
+    public void testMain() throws Exception
+    {
 
     }
 }

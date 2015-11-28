@@ -2,16 +2,21 @@ package Elementary.isBinaryOrNot.java;
 
 import java.util.Scanner;
 
-public class CheckBinary {
+public class CheckBinary
+{
 
-    public static void checkBinary(final int num) {
-        try {
-            Integer tmp = Integer.parseInt(num+"", 2);
+    public static void checkBinary(final int num)
+    {
+        try
+        {
+            Integer tmp = Integer.parseInt(num + "", 2);
             System.out.println("Binary");
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             System.out.println("Not Binary");
         }
     }
+
     public static void main(String[] args)
     {
         int num;

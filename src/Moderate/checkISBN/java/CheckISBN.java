@@ -1,10 +1,13 @@
 package Moderate.checkISBN.java;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 // TODO: write tests
 
-public class CheckISBN {
+public class CheckISBN
+{
 
     public static void main(String[] args)
     {
@@ -18,9 +21,11 @@ public class CheckISBN {
 
         System.out.println("The ISBN number is:");
 
-        if (isValidISBN10( parseISBN(input) )) {
+        if (isValidISBN10(parseISBN(input)))
+        {
             System.out.println("Valid");
-        } else {
+        } else
+        {
             System.out.println("Not Valid");
         }
 
@@ -30,26 +35,30 @@ public class CheckISBN {
      * @param num as Long
      * @return int - how many digits contain given long number
      */
-    public static int getNumLength(final Long num) {
-        return (int)(Math.log10(num) + 1);
+    public static int getNumLength(final Long num)
+    {
+        return (int) (Math.log10(num) + 1);
     }
 
     /**
-     *
      * @param stringIsbn take ISBN as string (without formatting)
      * @return List of Integers of ISBN string
      */
-    public static List<Integer> parseISBN(final String stringIsbn) {
+    public static List<Integer> parseISBN(final String stringIsbn)
+    {
         // remove all non-digit symbols
         String isbnDigits = stringIsbn.replaceAll("\\D+", "");
 
         List<Integer> isbnList = new ArrayList<>();
 
-        try {
-            for (char ch : isbnDigits.toCharArray()) {
-                isbnList.add( Integer.parseInt("" + ch) );
+        try
+        {
+            for (char ch : isbnDigits.toCharArray())
+            {
+                isbnList.add(Integer.parseInt("" + ch));
             }
-        } catch (NumberFormatException nfe) {
+        } catch (NumberFormatException nfe)
+        {
             // Suppress and skip exception if char is non-digit symbol
             // btw, string already replaced non-digits with ""
         }
@@ -60,31 +69,35 @@ public class CheckISBN {
     /**
      * Validates 10-digits ISBN number
      * https://en.wikipedia.org/wiki/International_Standard_Book_Number#ISBN-10_check_digits
+     *
      * @param isbn - List of Integers (list size must be == 10, else not valid)
      * @return boolean (valid or not)
      */
-    public static boolean isValidISBN10(final List<Integer> isbn) {
+    public static boolean isValidISBN10(final List<Integer> isbn)
+    {
         boolean isValidISBN = false;
 
         Integer sum = 0;
 
         // check if isbn size equals 10 digits
-        if ( isbn.size() != 10 ) {
+        if (isbn.size() != 10)
+        {
             return false;
         }
 
         // algorithm
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++)
+        {
             sum += isbn.get(10 - i - 1) * (i + 1);
         }
         // check if isbn multiple by 11
-        if (sum % 11 == 0) {
+        if (sum % 11 == 0)
+        {
             isValidISBN = true;
         }
 
         return isValidISBN;
     }
-
 
 
 }
