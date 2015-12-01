@@ -6,7 +6,7 @@ import com.googlecode.lanterna.terminal.swing.SwingTerminal;
 
 public class Application
 {
-
+    // TODO: move to main() with terminal size as args
     // Create terminal window with listener to close (X) button
     final static SwingTerminal terminal = new SwingTerminal();
     final static Screen screen = new Screen(terminal);
