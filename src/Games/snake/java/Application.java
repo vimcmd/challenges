@@ -8,7 +8,7 @@ public class Application
 {
     // TODO: move to main() with terminal size as args
     // Create terminal window with listener to close (X) button
-    final static SwingTerminal terminal = new SwingTerminal(80, 30);
+    final static SwingTerminal terminal = new SwingTerminal(120, 30);
     final static Screen screen = new Screen(terminal);
 
     public static void main(String[] args) throws InterruptedException
