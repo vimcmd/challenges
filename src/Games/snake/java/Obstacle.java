@@ -9,7 +9,7 @@ public class Obstacle extends Figure
 {
     private static final char DEFAULT_OBSTACLE_CHAR = '%';
 
-    public Obstacle(int startPosX, int startPosY, char ch, boolean horizontal, int length)
+    public Obstacle(int startPosX, int startPosY, char ch, boolean isHorizontal, int length)
     {
         pointList = new ArrayList<>();
 
@@ -17,7 +17,7 @@ public class Obstacle extends Figure
         {
             pointList.add(new Point(startPosX, startPosY, ch));
 
-            if (horizontal)
+            if (isHorizontal)
             {
                 startPosX += 1;
             } else
@@ -27,12 +27,12 @@ public class Obstacle extends Figure
         }
     }
 
-    public Obstacle(int x, int y, boolean horizontal, int length)
+    public Obstacle(int x, int y, boolean isHorizontal, int length)
     {
-        this(x, y, '#', horizontal, length);
+        this(x, y, '#', isHorizontal, length);
     }
 
-    public static void initBorders(Terminal terminal)
+    public static void drawBorders(Terminal terminal)
     {
         int lengthX = terminal.getTerminalSize().getColumns();
         int lengthY = terminal.getTerminalSize().getRows();
@@ -44,6 +44,7 @@ public class Obstacle extends Figure
         borders.add(new Obstacle(0, 0, DEFAULT_OBSTACLE_CHAR, false, lengthY)); // left
         borders.add(new Obstacle(lengthX - 1, 0, DEFAULT_OBSTACLE_CHAR, false, lengthY)); // right
 
+        // TODO: extract draw method
         for (Obstacle o : borders)
         {
             o.draw(terminal);
