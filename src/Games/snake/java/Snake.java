@@ -37,6 +37,24 @@ public class Snake extends Figure
         tail.clear();
     }
 
+    public boolean eat(Point food)
+    {
+        Point head = getNextPoint();
+
+        if (head.isHit(food))
+        {
+            // add point to tail after loop?
+            food.setCh(this.pointList.get(0).getCh());
+            pointList.add(food);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
     private Point getNextPoint()
     {
         Point head = ((LinkedList<Point>) pointList).getLast();
