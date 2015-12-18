@@ -26,8 +26,10 @@ public class Snake extends Figure
         this(tail, DEFAULT_SNAKE_SIZE);
     }
 
-    protected void move()
+    protected void move(Key key)
     {
+        this.handleControl(key);
+
         Point tail = ((LinkedList<Point>) pointList).getFirst();
         pointList.remove(tail);
         Point head = getNextPoint();
@@ -35,7 +37,7 @@ public class Snake extends Figure
         tail.clear();
     }
 
-    public Point getNextPoint()
+    private Point getNextPoint()
     {
         Point head = ((LinkedList<Point>) pointList).getLast();
         Point nextPoint = new Point(head);
@@ -49,7 +51,7 @@ public class Snake extends Figure
      *
      * @param key Key terminal.readInput() [lanterna lib]
      */
-    public void handleControl(Key key)
+    private void handleControl(Key key)
     {
         if (key != null)
         {
