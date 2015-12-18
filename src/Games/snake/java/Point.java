@@ -34,6 +34,23 @@ public class Point
         terminal.moveCursor(0, 0);
     }
 
+    public char getCh()
+    {
+        return ch;
+    }
+
+    public void setCh(char ch)
+    {
+
+        this.ch = ch;
+    }
+
+    public boolean isHit(Point p)
+    {
+        return p.x == this.x && p.y == this.y;
+
+    }
+
     public void clear()
     {
         this.ch = ' ';
