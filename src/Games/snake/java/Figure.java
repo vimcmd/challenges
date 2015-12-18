@@ -5,7 +5,7 @@ import com.googlecode.lanterna.terminal.Terminal;
 import java.util.List;
 
 
-public class Figure
+public abstract class Figure
 {
     protected List<Point> pointList;
 
