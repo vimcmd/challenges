@@ -7,13 +7,13 @@ public class Point
 {
     private int x;
     private int y;
-    private char ch;
+    private char symbol;
 
-    public Point(int x, int y, char ch)
+    public Point(int x, int y, char symbol)
     {
         this.x = x;
         this.y = y;
-        this.ch = ch;
+        this.symbol = symbol;
     }
 
     public Point(int x, int y)
@@ -23,37 +23,35 @@ public class Point
 
     public Point(Point p)
     {
-        this(p.x, p.y, p.ch);
+        this(p.x, p.y, p.symbol);
     }
 
     // TODO add checkIntersection method,
     public void draw(Terminal terminal)
     {
         terminal.moveCursor(this.x, this.y);
-        terminal.putCharacter(this.ch);
+        terminal.putCharacter(this.symbol);
         terminal.moveCursor(0, 0);
     }
 
-    public char getCh()
+    public char getSymbol()
     {
-        return ch;
+        return symbol;
     }
 
-    public void setCh(char ch)
+    public void setSymbol(char symbol)
     {
-
-        this.ch = ch;
+        this.symbol = symbol;
     }
 
     public boolean isHit(Point p)
     {
         return p.x == this.x && p.y == this.y;
-
     }
 
     public void clear()
     {
-        this.ch = ' ';
+        this.symbol = ' ';
         this.draw(Application.terminal);
     }
 
@@ -79,7 +77,7 @@ public class Point
     @Override
     public String toString()
     {
-        return this.x + ", " + y + ", " + ch;
+        return this.x + ", " + y + ", " + symbol;
     }
 
 }
